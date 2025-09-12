@@ -6,3 +6,16 @@
   font-family: 'Inter';
   scroll-behavior: smooth;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(73, 73, 255, 0.849);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(236, 235, 235);
+}
