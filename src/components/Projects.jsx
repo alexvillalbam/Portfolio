@@ -24,15 +24,23 @@ const Projects = () => {
             </p>
           </div>
         </a>
-        <div className='text-left space-y-2 border-2 hover:scale-105 transition-all duration-200 cursor-pointer px-8 py-10 border-blue-500 rounded-lg hover:bg-blue-50'>
-          <h1 className='text-3l font-semibold'>Project</h1>
-          <h3 className='text-xl text-gray-700'>Tech Stack</h3>
-          <p className='text-xs text-gray-600'>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum
-            placeat nisi qui velit, molestiae quis ut autem aperiam fugiat fuga
-            nobis ea ipsa sit quidem unde laudantium. Officiis, animi ipsum.
-          </p>
-        </div>
+        <a
+          href='https://alexvillalbam.github.io/task-board/'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='block'>
+          <div className='text-left space-y-2 border-2 hover:scale-105 transition-all duration-200 cursor-pointer px-8 py-10 border-blue-500 rounded-lg hover:bg-blue-50'>
+            <h1 className='text-3l font-semibold'>Task Board</h1>
+            <h3 className='text-xl text-gray-700'>React + Javascript</h3>
+            <p className='text-xs text-gray-600'>
+              Interactive task management application built with React and
+              Tailwind CSS. Features drag-and-drop functionality to move tasks
+              between To Do, In Progress, and Done columns. Users can add new
+              tasks with keyboard shortcuts, delete completed items, and select
+              target columns via dropdown menu.
+            </p>
+          </div>
+        </a>
         <div className='text-left space-y-2 border-2 hover:scale-105 transition-all duration-200 cursor-pointer px-8 py-10 border-blue-500 rounded-lg hover:bg-blue-50'>
           <h1 className='text-3l font-semibold'>Project</h1>
           <h3 className='text-xl text-gray-700'>Tech Stack</h3>
