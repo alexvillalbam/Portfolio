@@ -12,7 +12,7 @@ const HeaderLeft = () => {
     <div className='md:flex-[1]'>
       <div className='min-h-screen top-0 hidden md:sticky md:flex justify-center items-center bg-blue-800 text-white'>
         <ul className='flex flex-col gap-10'>
-          {['home', 'experience', 'projects', 'contacts'].map((item) => (
+          {['Inicio', 'Experiencia', 'Proyectos', 'Contacto'].map((item) => (
             <li
               key={item}
               className='flex items-center justify-start cursor-pointer font-medium transition-all duration-200 group sm:text-lg md:text-xl xl:text-3xl'>
