@@ -60,15 +60,15 @@ const Experience = () => {
     <section
       id='experience'
       aria-labelledby='experience-title'
-      className='scroll-mt-20 px-5 py-20 sm:px-8 lg:px-10 lg:py-24'>
+      className='scroll-mt-20 bg-surface px-5 py-20 sm:px-8 lg:px-10 lg:py-24'>
       <div className='mx-auto w-full max-w-5xl'>
         <div className='mx-auto max-w-2xl text-center'>
           <h2
             id='experience-title'
-            className='text-3xl font-light text-gray-900 sm:text-4xl lg:text-5xl'>
+            className='text-3xl font-semibold text-text-main sm:text-4xl lg:text-5xl'>
             Experiencia
           </h2>
-          <p className='mt-4 leading-7 text-gray-600'>
+          <p className='mt-4 leading-7 text-text-muted'>
             Desarrollo para clientes, experiencia profesional en calidad web y
             una base técnica en sistemas.
           </p>
@@ -78,18 +78,18 @@ const Experience = () => {
           {experiences.map((experience) => (
             <li
               key={`${experience.company}-${experience.title}`}
-              className={`relative border-l-2 pl-7 sm:pl-10 ${
+              className={`relative border-l border-border-subtle pl-7 sm:pl-10 ${
                 experience.featured
-                  ? 'border-blue-500 bg-blue-50/70 py-8 pr-5 sm:pr-8'
+                  ? 'rounded-r-lg bg-brand-light/40 py-8 pr-5 sm:pr-8'
                   : experience.compact
-                    ? 'border-gray-200 py-6 pr-1'
-                    : 'border-gray-200 py-8 pr-1'
+                    ? 'py-6 pr-1'
+                    : 'py-8 pr-1'
               }`}>
               <span
-                className={`absolute rounded-full bg-blue-500 ${
+                className={`absolute rounded-full ${
                   experience.featured
-                    ? '-left-[13px] top-9 h-6 w-6 ring-4 ring-blue-100'
-                    : '-left-[9px] top-9 h-4 w-4'
+                    ? '-left-[8px] top-9 h-4 w-4 bg-brand ring-4 ring-brand-light'
+                    : '-left-[5px] top-9 h-2.5 w-2.5 bg-border-strong ring-2 ring-surface'
                 }`}
                 aria-hidden='true'
               />
@@ -98,32 +98,32 @@ const Experience = () => {
                 <div className='flex flex-col gap-2 lg:flex-row lg:items-start lg:justify-between lg:gap-8'>
                   <div className='min-w-0'>
                     <h3
-                      className={`font-semibold text-gray-900 ${
+                      className={`font-semibold text-text-main ${
                         experience.featured
                           ? 'text-2xl sm:text-3xl'
                           : 'text-xl sm:text-2xl'
                       }`}>
                       {experience.title}
                     </h3>
-                    <p className='mt-1 font-medium text-gray-700'>
+                    <p className='mt-1 font-medium text-text-main'>
                       {experience.company}
                     </p>
                   </div>
 
-                  <div className='shrink-0 text-sm leading-6 text-gray-600 lg:text-right'>
+                  <div className='shrink-0 text-sm leading-6 text-text-muted lg:text-right'>
                     <p>{experience.dates}</p>
                     <p>{experience.location}</p>
                   </div>
                 </div>
 
                 {experience.summary && (
-                  <p className='mt-5 max-w-3xl leading-7 text-gray-700'>
+                  <p className='mt-5 max-w-3xl leading-7 text-text-main'>
                     {experience.summary}
                   </p>
                 )}
 
                 <ul
-                  className={`mt-4 list-disc space-y-2 pl-5 text-sm leading-6 text-gray-600 ${
+                  className={`mt-4 list-disc space-y-2 pl-5 text-sm leading-6 text-text-muted ${
                     experience.compact ? 'max-w-3xl' : ''
                   }`}>
                   {experience.responsibilities.map((responsibility) => (
@@ -138,7 +138,11 @@ const Experience = () => {
                   {experience.skills.map((skill) => (
                     <span
                       key={skill}
-                      className='rounded-md bg-white px-2.5 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-200'>
+                      className={`rounded-md px-2.5 py-1 text-xs font-medium ${
+                        experience.featured
+                          ? 'bg-brand-light text-brand-dark'
+                          : 'border border-border-subtle bg-surface-alt text-text-muted'
+                      }`}>
                       {skill}
                     </span>
                   ))}

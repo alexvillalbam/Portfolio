@@ -29,13 +29,13 @@ const Process = () => {
   return (
     <section
       id='process'
-      className='w-full scroll-mt-24 bg-gray-50 px-5 py-20 sm:px-8 sm:py-24 lg:px-10'>
+      className='w-full scroll-mt-24 bg-surface-alt px-5 py-20 sm:px-8 sm:py-24 lg:px-10'>
       <div className='mx-auto w-full max-w-7xl'>
         <div className='mx-auto max-w-2xl text-center'>
-          <h2 className='text-3xl font-light text-gray-900 sm:text-4xl lg:text-5xl'>
+          <h2 className='text-3xl font-semibold text-text-main sm:text-4xl lg:text-5xl'>
             Cómo trabajo
           </h2>
-          <p className='mt-4 leading-7 text-gray-600'>
+          <p className='mt-4 leading-7 text-text-muted'>
             Un proceso claro, con objetivos y entregables definidos desde el
             inicio hasta la publicación.
           </p>
@@ -45,20 +45,19 @@ const Process = () => {
           {steps.map(({ number, title, description }) => (
             <li
               key={number}
-              className='flex h-full min-w-0 flex-col rounded-lg border border-gray-200 border-t-blue-500 bg-white p-6 shadow-sm'>
-              <span className='text-sm font-semibold text-blue-600'>
+              className='flex h-full min-w-0 flex-col rounded-lg border border-border-subtle bg-surface p-6 shadow-soft'>
+              <span className='text-2xl font-semibold text-brand'>
                 {number}
               </span>
-              <h3 className='mt-3 text-xl font-semibold text-gray-900'>
+              <h3 className='mt-4 text-xl font-semibold text-text-main'>
                 {title}
               </h3>
-              <p className='mt-3 text-sm leading-6 text-gray-600'>
+              <p className='mt-3 text-sm leading-6 text-text-muted'>
                 {description}
               </p>
             </li>
           ))}
         </ol>
-
       </div>
     </section>
   );

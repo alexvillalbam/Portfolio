@@ -10,10 +10,10 @@ import Services from './components/Services';
 
 function App() {
   return (
-    <div className='min-h-screen bg-white text-gray-900 antialiased'>
+    <div className='min-h-screen bg-surface text-text-main antialiased'>
       <a
         href='#main-content'
-        className='fixed left-4 top-3 z-[60] -translate-y-20 rounded-md bg-white px-4 py-2 font-semibold text-blue-800 shadow-lg transition-transform focus:translate-y-0 focus:outline-none focus:ring-2 focus:ring-blue-500'>
+        className='fixed left-4 top-3 z-[60] -translate-y-20 rounded-md bg-surface-raised px-4 py-2 font-semibold text-brand shadow-lifted transition-transform focus:translate-y-0 focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-surface'>
         Saltar al contenido principal
       </a>
 

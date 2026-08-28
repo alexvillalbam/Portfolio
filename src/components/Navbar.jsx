@@ -46,7 +46,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 bg-blue-800 text-white shadow-sm transition-transform duration-300 motion-reduce:transition-none ${
+      className={`sticky top-0 z-50 border-b border-border-on-dark bg-brand-dark text-text-on-dark shadow-soft transition-transform duration-300 motion-reduce:transition-none ${
         isVisible ? 'translate-y-0' : '-translate-y-full'
       }`}
       onFocus={() => setIsVisible(true)}
@@ -59,7 +59,7 @@ const Navbar = () => {
         <a
           href='#home'
           onClick={closeMenu}
-          className='shrink-0 rounded-md text-base font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-800 sm:text-lg'>
+          className='shrink-0 rounded-md text-base font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-light focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark sm:text-lg'>
           Alex Villalba
         </a>
 
@@ -68,7 +68,7 @@ const Navbar = () => {
             <a
               key={id}
               href={`#${id}`}
-              className='rounded-md px-2.5 py-2 text-sm font-medium text-blue-50 transition-colors hover:bg-blue-700 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white xl:px-3'>
+              className='rounded-md px-2.5 py-2 text-sm font-medium text-text-muted-on-dark transition-colors hover:bg-brand-dark-hover hover:text-text-on-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-light xl:px-3'>
               {label}
             </a>
           ))}
@@ -78,7 +78,7 @@ const Navbar = () => {
           href={WHATSAPP_URL}
           target='_blank'
           rel='noopener noreferrer'
-          className='ml-auto inline-flex min-h-11 shrink-0 items-center justify-center gap-2 rounded-lg bg-white px-3 text-sm font-semibold text-blue-800 transition-colors hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-800 lg:ml-2 lg:px-4'>
+          className='ml-auto inline-flex min-h-11 shrink-0 items-center justify-center gap-2 rounded-lg bg-brand px-3 text-sm font-semibold text-text-on-dark transition-colors hover:bg-brand-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-light focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark lg:ml-2 lg:px-4'>
           <BiLogoWhatsapp className='h-5 w-5' aria-hidden='true' />
           <span className='hidden sm:inline'>Hablemos</span>
           <span className='sr-only sm:hidden'>Hablar por WhatsApp</span>
@@ -91,7 +91,7 @@ const Navbar = () => {
           aria-controls='mobile-menu'
           title={isOpen ? 'Cerrar menú' : 'Abrir menú'}
           onClick={() => setIsOpen((current) => !current)}
-          className='inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white lg:hidden'>
+          className='inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg transition-colors hover:bg-brand-dark-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-light lg:hidden'>
           {isOpen ? (
             <BiX className='h-7 w-7' aria-hidden='true' />
           ) : (
@@ -102,14 +102,14 @@ const Navbar = () => {
 
       <div
         id='mobile-menu'
-        className={`${isOpen ? 'block' : 'hidden'} border-t border-blue-700 lg:hidden`}>
+        className={`${isOpen ? 'block' : 'hidden'} border-t border-border-on-dark lg:hidden`}>
         <div className='mx-auto grid max-w-7xl gap-1 px-4 py-3 sm:grid-cols-2 sm:px-8'>
           {navigationItems.map(({ label, id }) => (
             <a
               key={id}
               href={`#${id}`}
               onClick={closeMenu}
-              className='flex min-h-11 items-center rounded-md px-3 py-2 text-sm font-medium text-blue-50 transition-colors hover:bg-blue-700 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white'>
+              className='flex min-h-11 items-center rounded-md px-3 py-2 text-sm font-medium text-text-muted-on-dark transition-colors hover:bg-brand-dark-hover hover:text-text-on-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-light'>
               {label}
             </a>
           ))}

@@ -6,11 +6,11 @@ const FeaturedProject = () => {
     <section
       id='projects'
       aria-labelledby='featured-project-title'
-      className='scroll-mt-20 bg-gray-50 px-5 py-20 sm:px-8 lg:px-10 lg:py-24'>
+      className='scroll-mt-20 bg-surface-alt px-5 py-20 sm:px-8 lg:px-10 lg:py-24'>
       <div className='mx-auto max-w-7xl'>
-        <div className='grid min-w-0 items-center gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(20rem,0.8fr)] lg:gap-14'>
-          <div className='min-w-0 overflow-hidden rounded-lg border border-gray-200 bg-white shadow-lg'>
-            <div className='aspect-video overflow-hidden bg-gray-100'>
+        <div className='grid min-w-0 items-center gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(20rem,0.85fr)] lg:gap-16'>
+          <div className='min-w-0 rounded-lg border border-border-subtle bg-surface-raised p-2 shadow-soft'>
+            <div className='aspect-video overflow-hidden rounded-md bg-surface-alt'>
               <img
                 src={featuredProject.image}
                 alt={featuredProject.imageAlt}
@@ -24,18 +24,21 @@ const FeaturedProject = () => {
           </div>
 
           <div className='min-w-0'>
-            <p className='text-sm font-semibold uppercase text-blue-700'>
-              Proyecto destacado
-            </p>
+            <div className='flex items-center gap-3'>
+              <span className='h-px w-8 bg-brand' aria-hidden='true' />
+              <p className='text-sm font-semibold uppercase text-brand'>
+                Proyecto destacado
+              </p>
+            </div>
             <h2
               id='featured-project-title'
-              className='mt-2 text-3xl font-semibold text-gray-900 sm:text-4xl'>
+              className='mt-3 text-3xl font-semibold text-text-main sm:text-4xl'>
               {featuredProject.title}
             </h2>
-            <p className='mt-2 text-lg font-medium text-blue-700'>
+            <p className='mt-2 text-lg font-semibold text-brand'>
               {featuredProject.subtitle}
             </p>
-            <p className='mt-5 max-w-xl leading-7 text-gray-600'>
+            <p className='mt-5 max-w-xl leading-7 text-text-muted'>
               {featuredProject.description}
             </p>
 
@@ -43,9 +46,9 @@ const FeaturedProject = () => {
               {featuredProject.responsibilities.map((responsibility) => (
                 <li
                   key={responsibility}
-                  className='flex items-start gap-3 text-sm leading-6 text-gray-700'>
+                  className='flex items-start gap-3 text-sm leading-6 text-text-muted'>
                   <BiCheckCircle
-                    className='mt-0.5 h-5 w-5 shrink-0 text-blue-600'
+                    className='mt-0.5 h-5 w-5 shrink-0 text-brand'
                     aria-hidden='true'
                   />
                   <span>{responsibility}</span>
@@ -57,7 +60,7 @@ const FeaturedProject = () => {
               {featuredProject.technologies.map((technology) => (
                 <span
                   key={technology}
-                  className='rounded-md bg-blue-50 px-2.5 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-200'>
+                  className='rounded-md bg-brand-light px-2.5 py-1 text-xs font-semibold text-brand-dark'>
                   {technology}
                 </span>
               ))}
@@ -67,13 +70,12 @@ const FeaturedProject = () => {
               href={featuredProject.liveUrl}
               target='_blank'
               rel='noopener noreferrer'
-              className='mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-blue-600 px-5 py-3 font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2'>
+              className='mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-brand px-5 py-3 font-semibold text-text-on-dark transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-surface-alt'>
               Ver sitio
               <BiLinkExternal className='h-5 w-5' aria-hidden='true' />
             </a>
           </div>
         </div>
-
       </div>
     </section>
   );

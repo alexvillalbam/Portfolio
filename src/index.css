@@ -4,18 +4,13 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-color: theme('colors.brand') theme('colors.surface-alt');
 }
 
 body {
-  min-width: 320px;
-  background: #ffffff;
-  color: #111827;
-}
+  @apply bg-surface font-sans text-text-main;
 
-*,
-*::before,
-*::after {
-  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  min-width: 320px;
 }
 
 #root {
@@ -23,8 +18,7 @@ body {
 }
 
 ::selection {
-  background: #bfdbfe;
-  color: #1e3a8a;
+  @apply bg-brand-light text-brand-hover;
 }
 
 ::-webkit-scrollbar {
@@ -32,12 +26,17 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(73, 73, 255, 0.849);
+  @apply bg-brand;
+
   border-radius: 10px;
 }
 
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-brand-hover;
+}
+
 ::-webkit-scrollbar-track {
-  background: rgb(236, 235, 235);
+  @apply bg-surface-alt;
 }
 
 @media (prefers-reduced-motion: reduce) {

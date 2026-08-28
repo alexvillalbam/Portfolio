@@ -3,11 +3,13 @@ import olindaShoesImage from '../assets/projects/olinda-shoes.webp';
 import taskBoardImage from '../assets/projects/task-board.webp';
 
 export const WHATSAPP_NUMBER = '595984733625';
+export const WHATSAPP_DISPLAY = '+595 984 733625';
 export const WHATSAPP_MESSAGE =
   'Hola Alex, vi tu portfolio y quisiera conversar sobre un proyecto web.';
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   WHATSAPP_MESSAGE,
 )}`;
+export const TEL_URL = `tel:+${WHATSAPP_NUMBER}`;
 
 export const SOCIAL_LINKS = {
   github: 'https://github.com/alexvillalbam',
@@ -43,7 +45,7 @@ export const featuredProject = {
 
 export const otherProjects = [
   {
-    title: 'Landing Page',
+    title: 'E-commerce Landing Page',
     description:
       'Landing e-commerce responsive enfocada en jerarquía visual, navegación clara y adaptación fluida entre dispositivos.',
     technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Responsive'],
