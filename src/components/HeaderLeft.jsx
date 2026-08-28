@@ -1,58 +1,54 @@
-import React from 'react';
 import {
+  BiBriefcase,
   BiCode,
   BiHome,
   BiMailSend,
   BiRightArrowAlt,
-  BiBriefcase,
 } from 'react-icons/bi';
+
+const navigationItems = [
+  { label: 'Inicio', id: 'home', icon: BiHome },
+  { label: 'Experiencia', id: 'experience', icon: BiBriefcase },
+  { label: 'Proyectos', id: 'projects', icon: BiCode },
+  { label: 'Contacto', id: 'contacts', icon: BiMailSend },
+];
 
 const HeaderLeft = () => {
   return (
-    <div className='md:flex-[1]'>
-      <div className='min-h-screen top-0 hidden md:sticky md:flex justify-center items-center bg-blue-800 text-white'>
+    <header className='md:flex-[1]'>
+      <nav
+        aria-label='Navegación principal'
+        className='top-0 hidden min-h-screen items-center justify-center bg-blue-800 text-white md:sticky md:flex'>
         <ul className='flex flex-col gap-10'>
-          {['Inicio', 'Experiencia', 'Proyectos', 'Contacto'].map((item) => (
+          {navigationItems.map(({ label, id }) => (
             <li
-              key={item}
-              className='flex items-center justify-start cursor-pointer font-medium transition-all duration-200 group sm:text-lg md:text-xl xl:text-3xl'>
-              <BiRightArrowAlt className='text-4xl -translate-x-5 opacity-0 transform transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0' />
-
+              key={id}
+              className='group flex cursor-pointer items-center justify-start font-medium transition-all duration-200 sm:text-lg md:text-xl xl:text-3xl'>
+              <BiRightArrowAlt className='-translate-x-5 transform text-4xl opacity-0 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100' />
               <a
-                href={`#${item}`}
+                href={`#${id}`}
                 className='transition-all duration-200 hover:translate-x-3'>
-                {item}
+                {label}
               </a>
             </li>
           ))}
         </ul>
-      </div>
+      </nav>
 
-      <div className='fixed left-0 right-0 top-0 z-10 flex justify-evenly bg-blue-800 p-5 text-white md:hidden'>
-        <a href='#home' className='flex flex-col items-center justify-center'>
-          <BiHome className='text-2xl' />
-          <span className='text-xs'>Inicio</span>
-        </a>
-        <a
-          href='#experience'
-          className='flex flex-col items-center justify-center'>
-          <BiBriefcase className='text-2xl' />
-          <span className='text-xs'>Experiencia</span>
-        </a>
-        <a
-          href='#projects'
-          className='flex flex-col items-center justify-center'>
-          <BiCode className='text-2xl' />
-          <span className='text-xs'>Proyectos</span>
-        </a>
-        <a
-          href='#contacts'
-          className='flex flex-col items-center justify-center'>
-          <BiMailSend className='text-2xl' />
-          <span className='text-xs'>Contacto</span>
-        </a>
-      </div>
-    </div>
+      <nav
+        aria-label='Navegación móvil'
+        className='fixed left-0 right-0 top-0 z-10 flex justify-evenly bg-blue-800 p-4 text-white md:hidden'>
+        {navigationItems.map(({ label, id, icon: Icon }) => (
+          <a
+            key={id}
+            href={`#${id}`}
+            className='flex min-w-16 flex-col items-center justify-center'>
+            <Icon className='text-2xl' aria-hidden='true' />
+            <span className='text-xs'>{label}</span>
+          </a>
+        ))}
+      </nav>
+    </header>
   );
 };
 

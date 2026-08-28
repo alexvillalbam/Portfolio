@@ -11,7 +11,7 @@ function App() {
       <div className="flex min-h-screen w-full subpixel-antialiased">
       <HeaderLeft />
 
-      <main className="flex-[3]">
+      <main className="min-w-0 flex-[3]">
         <Home />
         <Experience />
         <Projects />
