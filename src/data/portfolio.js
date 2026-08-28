@@ -2,8 +2,8 @@ import landingPageImage from '../assets/projects/landing-page.webp';
 import olindaShoesImage from '../assets/projects/olinda-shoes.webp';
 import taskBoardImage from '../assets/projects/task-board.webp';
 
-export const WHATSAPP_NUMBER = '595984733625';
-export const WHATSAPP_DISPLAY = '+595 984 733625';
+export const WHATSAPP_NUMBER = '595971996460';
+export const WHATSAPP_DISPLAY = '+595 971 996460';
 export const WHATSAPP_MESSAGE =
   'Hola Alex, vi tu portfolio y quisiera conversar sobre un proyecto web.';
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
