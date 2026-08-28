@@ -1,17 +1,17 @@
 const experiences = [
   {
-    title: 'Desarrollador web / Freelance Web Developer',
+    title: 'Desarrollador Web Freelance',
     company: 'Profesional independiente',
     dates: 'Julio 2025 – Presente',
     location: 'Remoto',
     featured: true,
     summary:
-      'Diseño y desarrollo sitios web responsive para clientes reales, convirtiendo objetivos comerciales en experiencias claras, rápidas y listas para producción.',
+      'Diseño y desarrollo sitios web para clientes reales, convirtiendo objetivos de negocio en experiencias claras, rápidas y listas para producción.',
     responsibilities: [
-      'Desarrollo front-end y creación de sitios web y experiencias e-commerce con WordPress y WooCommerce cuando el proyecto lo requiere.',
+      'Desarrollo front-end de sitios corporativos, landing pages y experiencias e-commerce con WordPress y WooCommerce cuando el proyecto lo requiere.',
       'Implementación responsive, optimización de rendimiento, SEO y fundamentos de SEO técnico.',
       'Despliegue y configuración de producción, incluyendo dominio, DNS, hosting y SSL según las necesidades del sitio.',
-      'Mantenimiento, mejoras continuas y comunicación directa con clientes para traducir requisitos de negocio en soluciones web.',
+      'Mantenimiento, mejoras continuas y comunicación directa con clientes para traducir requisitos comerciales en soluciones web.',
     ],
     skills: [
       'Front-end',
@@ -19,31 +19,37 @@ const experiences = [
       'WordPress',
       'WooCommerce',
       'SEO técnico',
-      'Deployment',
+      'Despliegue',
     ],
   },
   {
     title: 'Website QA Analyst',
-    company: 'Nestlé · Full-time',
+    company: 'Nestlé · Tiempo completo',
     dates: 'Marzo 2026 – Presente',
     location: 'Asunción, Paraguay · Híbrido',
     responsibilities: [
       'Ejecución de pruebas funcionales, smoke y de regresión para cambios en sitios web antes de su despliegue.',
-      'Validación de entregables en Drupal: contenido, layouts, enlaces, assets, tracking básico y consistencia cross-browser.',
+      'Validación de entregables en Drupal: contenido, layouts, enlaces, assets, tracking básico y consistencia entre navegadores.',
       'Revisión frente a lineamientos de marca y requisitos técnicos, documentando hallazgos con pasos de reproducción, evidencia y severidad.',
-      'Coordinación con equipos de contenido, SEO y desarrollo mediante tickets, SLAs y priorización; aporte a checklists, estándares y visibilidad de calidad para la mejora continua.',
+      'Coordinación con equipos de contenido, SEO y desarrollo mediante tickets, SLAs y priorización; aporte a checklists, estándares y visibilidad de calidad.',
     ],
-    skills: ['QA Web', 'Drupal', 'Regression Testing', 'Cross-browser', 'SEO'],
+    skills: [
+      'QA web',
+      'Drupal',
+      'Pruebas de regresión',
+      'Compatibilidad',
+      'SEO',
+    ],
   },
   {
-    title: 'Analista de sistemas / Systems Analyst',
+    title: 'Analista de Sistemas',
     company: 'Tribunal Superior de Justicia Electoral',
     dates: 'Agosto 2024 – Agosto 2025',
     location: 'Asunción, Paraguay',
     compact: true,
     responsibilities: [
       'Desarrollo front-end de aplicaciones institucionales con React, JavaScript, HTML y CSS.',
-      'Trabajo con consultas y datos para mejorar la fiabilidad de interfaces y sistemas internos.',
+      'Trabajo con consultas y datos para mejorar interfaces y sistemas internos.',
     ],
     skills: ['Front-end', 'React', 'JavaScript', 'Bases de datos'],
   },
@@ -53,19 +59,28 @@ const Experience = () => {
   return (
     <section
       id='experience'
-      className='flex min-h-screen w-full scroll-mt-20 items-center justify-center px-6 py-24 sm:px-10 md:scroll-mt-0 md:px-12 lg:px-16 xl:px-24'>
-      <div className='w-full max-w-5xl'>
-        <h2 className='text-center text-4xl font-light sm:text-5xl'>
-          Experiencia
-        </h2>
+      aria-labelledby='experience-title'
+      className='scroll-mt-20 px-5 py-20 sm:px-8 lg:px-10 lg:py-24'>
+      <div className='mx-auto w-full max-w-5xl'>
+        <div className='mx-auto max-w-2xl text-center'>
+          <h2
+            id='experience-title'
+            className='text-3xl font-light text-gray-900 sm:text-4xl lg:text-5xl'>
+            Experiencia
+          </h2>
+          <p className='mt-4 leading-7 text-gray-600'>
+            Desarrollo para clientes, experiencia profesional en calidad web y
+            una base técnica en sistemas.
+          </p>
+        </div>
 
         <ol className='mt-12'>
           {experiences.map((experience) => (
             <li
               key={`${experience.company}-${experience.title}`}
-              className={`relative border-l-2 pl-8 ${
+              className={`relative border-l-2 pl-7 sm:pl-10 ${
                 experience.featured
-                  ? 'border-blue-500 bg-blue-50/70 py-8 pr-5 sm:pl-10 sm:pr-8'
+                  ? 'border-blue-500 bg-blue-50/70 py-8 pr-5 sm:pr-8'
                   : experience.compact
                     ? 'border-gray-200 py-6 pr-1'
                     : 'border-gray-200 py-8 pr-1'
@@ -80,14 +95,8 @@ const Experience = () => {
               />
 
               <article>
-                {experience.featured && (
-                  <p className='mb-2 text-sm font-semibold uppercase text-blue-600'>
-                    Experiencia principal
-                  </p>
-                )}
-
                 <div className='flex flex-col gap-2 lg:flex-row lg:items-start lg:justify-between lg:gap-8'>
-                  <div>
+                  <div className='min-w-0'>
                     <h3
                       className={`font-semibold text-gray-900 ${
                         experience.featured
@@ -122,7 +131,10 @@ const Experience = () => {
                   ))}
                 </ul>
 
-                <div className='mt-5 flex flex-wrap gap-2'>
+                <div
+                  className={`flex flex-wrap gap-2 ${
+                    experience.compact ? 'mt-4' : 'mt-5'
+                  }`}>
                   {experience.skills.map((skill) => (
                     <span
                       key={skill}
