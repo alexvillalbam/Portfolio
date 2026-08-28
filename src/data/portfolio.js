@@ -18,7 +18,8 @@ export const SOCIAL_LINKS = {
 
 export const featuredProject = {
   title: 'Olinda Shoes',
-  subtitle: 'Desarrollo de e-commerce personalizado y funcional.',
+  subtitle:
+    'Desarrollo e implementación de e-commerce para una marca de calzado.',
   description:
     'Sitio de comercio electrónico en producción, creado para presentar un catálogo amplio y ofrecer una experiencia de compra clara desde cualquier dispositivo.',
   responsibilities: [
@@ -27,12 +28,7 @@ export const featuredProject = {
     'SEO técnico y optimización de rendimiento mediante caché.',
     'Puesta en producción en dominio propio, configuración técnica y mantenimiento continuo.',
   ],
-  technologies: [
-    'WordPress',
-    'WooCommerce',
-    'SEO técnico',
-    'Optimización',
-  ],
+  technologies: ['WordPress', 'WooCommerce', 'SEO técnico', 'Optimización'],
   image: olindaShoesImage,
   imageAlt: 'Página principal de la tienda online Olinda Shoes',
   liveUrl: 'https://olindashoes.com.py/',
