@@ -18,7 +18,7 @@ export const SOCIAL_LINKS = {
 
 export const featuredProject = {
   title: 'Olinda Shoes',
-  subtitle: 'E-commerce desarrollado para un cliente real',
+  subtitle: 'Desarrollo de e-commerce personalizado y funcional.',
   description:
     'Sitio de comercio electrónico en producción, creado para presentar un catálogo amplio y ofrecer una experiencia de compra clara desde cualquier dispositivo.',
   responsibilities: [
@@ -30,8 +30,6 @@ export const featuredProject = {
   technologies: [
     'WordPress',
     'WooCommerce',
-    'Elementor',
-    'Responsive',
     'SEO técnico',
     'Optimización',
   ],

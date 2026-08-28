@@ -27,7 +27,7 @@ const FeaturedProject = () => {
             <div className='flex items-center gap-3'>
               <span className='h-px w-8 bg-brand' aria-hidden='true' />
               <p className='text-sm font-semibold uppercase text-brand'>
-                Proyecto destacado
+                Trabajo reciente
               </p>
             </div>
             <h2
