@@ -1,12 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <title>Alex Villalba</title>
-  <rect width="64" height="64" rx="12" fill="#1e40af" />
+  <rect width="64" height="64" rx="12" fill="#0F172A" />
   <text
     x="32"
-    y="40"
-    fill="#ffffff"
-    font-family="Arial, sans-serif"
+    y="38"
+    fill="#FAFAF7"
+    font-family="Manrope, Arial, sans-serif"
     font-size="24"
-    font-weight="700"
+    font-weight="800"
     text-anchor="middle">AV</text>
+  <path
+    d="M19 47h26"
+    fill="none"
+    stroke="#0F766E"
+    stroke-linecap="round"
+    stroke-width="4" />
 </svg>
