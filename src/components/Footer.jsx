@@ -32,7 +32,7 @@ const Footer = () => {
       <div className='mx-auto flex w-full max-w-7xl flex-col gap-4 lg:flex-row lg:items-center lg:justify-between'>
         <div>
           <p className='font-semibold text-text-on-dark'>
-            Alex Villalba &mdash; Desarrollador Web Freelance
+            Alex Villalba &mdash; Desarrollador Web
           </p>
           <p className='mt-2 flex items-center gap-2 text-sm'>
             <BiMapPin className='h-4 w-4 shrink-0' aria-hidden='true' />

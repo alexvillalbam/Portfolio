@@ -28,7 +28,7 @@ const Hero = () => {
             Alex Villalba
             <span className='text-text-muted'>
               {' '}
-              &middot; Desarrollador Web Freelance
+              &middot; Desarrollador Web
             </span>
           </p>
         </div>

@@ -1,6 +1,6 @@
 const experiences = [
   {
-    title: 'Desarrollador Web Freelance',
+    title: 'Desarrollador Web',
     company: 'Profesional independiente',
     dates: 'Julio 2025 – Presente',
     location: 'Remoto',
